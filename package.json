@@ -1,0 +1,27 @@
+{
+  "name": "@monorepo-starter/root",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "services/*"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@preconstruct/cli": "^2.8.1"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*",
+      "services/*"
+    ]
+  },
+  "scripts": {
+    "postinstall": "preconstruct dev",
+    "build": "preconstruct build"
+  }
+}
